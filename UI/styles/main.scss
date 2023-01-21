@@ -1,0 +1,12 @@
+// scss files
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+@import 'abstracts/common.scss';
+@import 'base/reset.scss';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'sections/login-section';
+@import 'sections/hamburger-menu-section';
+@import 'sections/provider-section';
+@import 'sections/student-section';
+@import 'sections/order-tracking-section';

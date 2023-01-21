@@ -1,0 +1,21 @@
+// Setting border property for an element based on the values given in the argument
+
+@mixin border($border-radius, $border-type , $border-color, $position: null) {
+
+    // if position is given then  border is created in specific postion-right,left, top, bottom
+    @if ($position) {
+        border-#{$position}: $border-radius $border-type $border-color;
+    }
+    // else border is created on all 4 sides
+    @else {
+        border: $border-radius $border-type $border-color;
+    }
+}
+
+
+// font template
+@mixin font-template($f-size, $f-weight, $f-spacing) {
+    font-size: $f-size;
+    font-weight: $f-weight;
+    padding-bottom: $f-spacing;
+}

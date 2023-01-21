@@ -1,0 +1,23 @@
+.verticalAlign {
+  display: grid;
+  align-items: center;
+}
+
+.navLink {
+  font-size: 18px;
+  font-family: Open Sans, sans-serif;
+}
+
+.navBar {
+  background-color: #1d3557;
+}
+
+.navItem {
+  padding: 10px;
+  padding-top: 15px;
+  padding-left: 20px;
+  &:hover {
+    border-bottom: solid 1px rgb(163, 160, 160);
+    background-color: rgb(215, 218, 218);
+  }
+}

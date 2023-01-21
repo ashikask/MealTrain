@@ -1,0 +1,5 @@
+// Setting the Common font properties for all the elements except the h1 elements*
+* :not(h1) {
+    font-size: $default-font-size;
+    //font-family: $default-font-family;
+}

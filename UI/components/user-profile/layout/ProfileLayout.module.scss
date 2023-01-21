@@ -1,0 +1,129 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+// Progressbar
+.container {
+  padding-top: $spacing-vsmall;
+  justify-content: center;
+  align-items: center;
+  .formWrapper {
+    margin: 0 auto;
+    padding: 45px;
+    background-image: url('../../../public/food-bg.jpg');
+
+    background-color: $third-color;
+    .progressbar {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      counter-reset: step;
+
+      // progress bar line
+      &:before,
+      .progress {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 3px;
+        width: 100%;
+        background-color: $primary-color;
+        z-index: 1;
+      }
+
+      // in-active circles
+      .progressStep {
+        width: 42px;
+        height: 43px;
+        background-color:#2f4f4fed;// blue;//$third-color;
+        border-radius: 50%;
+        // border: $border-width-large solid $primary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $third-color;
+        font-weight: bold;
+        z-index: 2;
+
+        // circle
+        &:before {
+          counter-increment: step;
+          content: counter(step);
+          //color: $primary-color;
+        }
+
+        // top text
+        &:after {
+          content: attr(data-title);
+          font-weight: bold;
+          position: absolute;
+          top: calc(-100% + $spacing-small);
+          font-size: $default-font-size + 3px;
+          color: $third-color;
+          background-color: #f5b011;
+          white-space: nowrap;
+          padding: 3px;
+          border-radius: 14px;
+        }
+      }
+
+      // active circle
+      .progressStepActive {
+        background-color:lightseagreen;
+        color: $third-color;
+        border: none;
+      }
+    }
+
+
+    
+
+    .btnArray {
+      display: flex;
+      //justify-content: space-between;
+      //justify-content:space-evenly;
+      justify-content: space-around;
+      margin: 0;
+
+      p {
+        margin: 0 !important;
+
+        input[type="submit"] {
+          margin: 0;
+          height: auto;
+          width: auto;
+          padding: $spacing-vsmall $spacing-xlarge;
+          font-weight: $font-weight-light;
+          text-align: center;
+          border: none;
+          border-radius: $border-radius-small;
+          color: $third-color; // not working!
+          background-color: $primary-color-background;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $primary-color-highlight;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.test {
+  font-size: 40px;
+  color: orange;
+  input[type="file"] {
+    font-size: 40px;
+    // color:blue;
+    #file-upload-button {
+      color: red !important;
+    }
+  }
+}
+
+.image {
+  background-image: url('../../../public/train.gif');
+}

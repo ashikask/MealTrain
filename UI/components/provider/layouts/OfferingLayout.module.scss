@@ -1,0 +1,27 @@
+.fabContainer {
+  position: fixed;
+  bottom: 4vh;
+  left: 95vw;
+  cursor: pointer;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #e63946;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  transition-duration: 0.1s;
+  &:hover {
+    width: 52px;
+    height: 52px;
+    background-color: #f45562;
+  }
+}
+.iconbutton i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92%;
+  color: white;
+}
